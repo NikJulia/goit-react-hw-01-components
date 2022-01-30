@@ -10,8 +10,7 @@ import {
     ProfileStatsItem 
 } from './Profile.styled';
 
-export default function Profile({ data: { username: userName, tag, location, avatar: avatarUrl, stats: { followers, views, likes } } }) {
-    // const { username: userName, tag, location, avatar: avatarUrl, stats: { followers, views, likes } } = data;
+export default function Profile({ username: userName, tag, location, avatar: avatarUrl, stats: { followers, views, likes } }) {
     return (
         <ProfileCard>
             <ProfileDesc>

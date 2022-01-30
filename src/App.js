@@ -1,7 +1,7 @@
-import user from 'components/SocialProfile/user';
-import friends from 'components/FriendList/friends';
-import data from 'components/Statistics/data';
-import transactions from 'components/TransactionHistory/transactions';
+import user from 'data/user';
+import friends from 'data/friends';
+import data from 'data/data';
+import transactions from 'data/transactions';
 
 import { MainContainer } from 'App.styled';
 import Section from 'components/Section/Section';
@@ -14,7 +14,13 @@ export default function App() {
   return (
     <MainContainer>
       <Section title="User Profile">
-        <Profile data={user} />
+        <Profile
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
+        />
       </Section>
         
       <Section title="Friends">
